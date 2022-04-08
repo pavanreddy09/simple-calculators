@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&family=Signika+Negative&display=swap" rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/37304514cd.js" crossorigin="anonymous"></script> -->
+    <title>GST Tax Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="heading">
+      <h1>GST TAX CALCULATOR</h1>
+    </div>
+    <div class="main">
+      <div class="container">
+        <div class="div-contain">
+          <div class="label_div">
+            <label for="select">Country :</label>
+          </div>
+          <div class="value-div">
+            <select name="select">
+              <option value="1">India</option>
+              <option value="2">Australia</option>
+              <option value="3">Canada</option>
+              <option value="4">Hong Kong</option>
+              <option value="5">Malaysia</option>
+              <option value="6">New Zealand</option>
+              <option value="7">Singapore</option>
+            </select>
+          </div>
+        </div>
+        <div class="div-contain">
+          <div class="label_div">
+            <label for="inamount">Initial Amount :</label>
+          </div>
+          <div class="value-div">
+            <span class="amt_icon">&#8377;</span>
+            <input type="number" name="inamount" id="inamount" />
+          </div>
+        </div>
+        <div class="div-contain">
+          <div class="label_div">
+            <label for="rate">GST Rate :</label>
+          </div>
+          <div class="value-div">
+            <span>%</span>
+            <input type="number" value="18" id="rate" readonly />
+          </div>
+        </div>
+        <div class="div-contain">
+          <button id="addgst">Add GST</button>
+          <button id="removegst">Remove GST</button>
+          <button id="clear">clear</button>
+        </div>
+
+        <div class="div-contain">
+          <div class="label_div">
+            <label for="netamount">Net Amount :</label>
+          </div>
+          <div class="value-div">
+            <span class="amt_icon">&#8377;</span>
+            <input type="number" id="netamount" readonly />
+          </div>
+        </div>
+        <div class="div-contain">
+          <div class="label_div">
+            <label for="gstamount">GST Amount :</label>
+          </div>
+          <div class="value-div">
+            <span class="amt_icon">&#8377;</span>
+            <input type="number" id="gstamount" readonly />
+          </div>
+        </div>
+        <div class="div-contain">
+          <div class="label_div">
+            <label for="grossamount">Gross Amount :</label>
+          </div>
+          <div class="value-div">
+            <span class="amt_icon">&#8377;</span>
+            <input type="number" id="grossamount" readonly />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

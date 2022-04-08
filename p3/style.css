@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #a6acaf;
+  font-family: "Hurricane", cursive;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Signika Negative", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+.heading {
+  height: 60px;
+  background-color: #cecece;
+  padding: 20px 10px 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  width: 99%;
+  flex-direction: column;
+}
+.container {
+  /* background-color: #ffd2de; */
+  width: 60%;
+  height: 58%;
+  padding: 60px 15px 0 15px;
+  display: none;
+}
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 17px;
+  margin-top: 10px;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  appearance: none;
+}
+input:focus {
+  outline: none;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.label-div {
+  width: 25%;
+  margin-top: 0;
+}
+.value-div {
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+}
+.tab {
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  border-bottom: none;
+  background-color: #f1f1f1;
+  width: 62%;
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+/* .tab button.active {
+  background-color: #ffd2de;
+} */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.clear {
+  background-color: gray;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+}
+#cal {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.in-div {
+  display: flex;
+  justify-content: space-between;
+}
+.exp-val {
+  margin-right: 20%;
+}
+
+.modulus {
+  margin-top: 80px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+#Factorial {
+  background-color: #F3C0FE;
+}
+#Lcm {
+  background-color: #9ED1FF;
+}
+#Gcf {
+  background-color: #C0FEE5;
+}
+#exp {
+  background-color: #FEC3C0;
+}
+#mod {
+  background-color: #D2FEC0;
+}

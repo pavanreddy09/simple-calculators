@@ -1,0 +1,82 @@
+body {
+    background-color: black;
+}
+.logo {
+    display: flex;
+ justify-content: center;
+  align-items: center;
+    
+}
+.logo i {
+    color:yellowgreen;
+}
+
+h1 {
+    color: white;
+}
+.container {
+  display: flex;
+   flex-direction: column;
+ justify-content: center;
+  align-items: center;
+   margin-top: 30px;
+   
+}
+.button-div {
+ height: 400px;
+ width: 400px;
+ display: grid;
+ grid-template-columns: 100px 100px 100px 100px;
+ /* margin-top: 10px; */
+ background-color: honeydew;
+ /* box-shadow: 
+   0 1px 1px rgba(0,0,0,0.15),
+
+   0 10px 0 -5px #eee,
+    
+   0 10px 1px -4px rgba(0,0,0,0.15),
+
+   0 20px 0 -10px #eee,
+   0 20px 1px -9px rgba(0,0,0,0.15); */
+}
+.input-div {
+   width: 400px;
+}
+input {
+ height: 100px;
+ width: 400px;
+ outline: none;
+ border: none;
+ font-size: 20px;
+ padding-left: 10px;
+ /* text-align: right;
+ padding-right: 5px ; */
+}
+button {
+ outline: none;
+ cursor: pointer;
+ border: none;
+ font-size: 25px;
+}
+.number {
+ background-color:whitesmoke;
+}
+.operation {
+ background-color: rgb(205, 205, 214);
+ color:rgb(25, 0, 255);
+}  
+@media  (max-width:786px) {
+  .container {
+    width: 98%;
+    height: 88%;
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow: hidden;
+    display: flex;
+     flex-direction: column;
+   justify-content: flex-end;
+     margin-top: 0;
+     
+  }
+  
+}

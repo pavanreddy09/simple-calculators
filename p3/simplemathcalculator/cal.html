@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" 
+        crossorigin="anonymous">
+        <link rel="stylesheet"  id="theme" href="light.css">
+    </head>
+<body>
+    <div class="logo">
+        <h1><i class="fab fa-drupal"></i>Calculator</h1>
+    </div>
+    <div class="container">
+        <div class="input-div">
+            <input type="text" id="result" placeholder="0" readonly>
+        </div>
+        <div class="button-div">
+            <button class="operation" onclick="clearscreen()">C</button>
+            <button class="operation" onclick="backval()"><i class="fas fa-backspace"></i></button>
+            <button class="operation" onclick="updatescreen('%')">%</button>
+            <button class="operation" onclick="updatescreen('/')">/</button>
+            <button class="number" onclick="updatescreen(7)">7</button>
+            <button class="number" onclick="updatescreen(8)">8</button>
+            <button class="number" onclick="updatescreen(9)">9</button>
+            <button class="operation" onclick="updatescreen('*')">*</button>
+            <button class="number" onclick="updatescreen(4)">4</button>
+            <button class="number" onclick="updatescreen(5)">5</button>
+            <button class="number" onclick="updatescreen(6)">6</button>
+            <button class="operation" onclick="updatescreen('-')">-</button>
+            <button class="number" onclick="updatescreen(1)">1</button>
+            <button class="number" onclick="updatescreen(2)">2</button>
+            <button class="number" onclick="updatescreen(3)">3</button>
+            <button class="operation" onclick="updatescreen('+')">+</button>
+            <button id="dark" onclick="Darkmode()">Dark</button>
+            <button class="number" onclick="updatescreen(0)">0</button>
+            <button class="number" onclick="updatescreen('.')">.</button>
+            <button class="operation ans" onclick="result.value = eval(result.value)">=</button>
+            
+           
+            
+        </div>
+    </div>
+    <script>
+        function updatescreen(val) {
+           
+            var res = document.getElementById("result").value;
+            document.getElementById("result").value = res + val;
+        }
+        function clearscreen() {
+            document.getElementById("result").value = "";
+        }
+        function backval() {
+            var back = document.getElementById("result").value;
+            document.getElementById("result").value = back.substring(0, back.length - 1);
+        }
+        function Darkmode() {
+            var dark = document.getElementById("dark");
+            var theme = document.getElementById("theme");
+            if (theme.getAttribute('href') == 'light.css') {
+                theme.href = "dark.css";
+                dark.innerHTML = "Light"
+            } else {
+                theme.href = "light.css";
+                dark.innerHTML = "Dark"
+            }
+        }
+    </script>
+</body>
+</html>

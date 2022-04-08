@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/37304514cd.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Simple Calculators</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hurricane&family=Roboto+Mono:wght@400;500&family=Signika+Negative&family=Ubuntu:ital,wght@1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #e2fadc;
+        font-family: "Hurricane", cursive;
+        font-family: "Roboto Mono", monospace;
+        font-family: "Signika Negative", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+      }
+      .heading {
+        height: 60px;
+        background-color: #cecece;
+        padding: 20px 10px 0 10px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 20px;
+        width: 60%;
+        border: 1px solid grey;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+
+      .active,
+      .accordion:hover {
+        background-color: #ccc;
+      }
+
+      .panel {
+        /* padding: 20px; */
+        display: none;
+        background-color: white;
+        overflow: hidden;
+        height: 80px;
+        width: 60%;
+        border: 1px solid grey;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 650px;
+        width: 99%;
+        flex-direction: column;
+      }
+      i {
+        float: right;
+      }
+      a {
+        text-decoration: none;
+        background-color: green;
+        padding: 15px;
+        color: white;
+        border-radius: 6px;
+      }
+      .a-div {
+        margin-top: 25px;
+        margin-left: 20px;
+      }
+      .p3-div {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>Simple Calculators Project</h1>
+    </div>
+
+    <div class="main">
+      <button class="accordion" onclick="change_icon(this)">
+        Project 1 <i class="fa-solid fa-plus"></i>
+      </button>
+      <div class="panel">
+        <div class="a-div">
+          <a href="/p1/index.html" target="_blank">Baby Names List</a>
+        </div>
+      </div>
+
+      <button class="accordion" onclick="change_icon(this)">
+        Project 2 <i class="fa-solid fa-plus"></i>
+      </button>
+      <div class="panel">
+        <div class="a-div">
+          <a href="/p2/index.html" target="_blank">GST Tax Calculator</a>
+        </div>
+      </div>
+
+      <button class="accordion" onclick="change_icon(this)">
+        Project 3 <i class="fa-solid fa-plus"></i>
+      </button>
+      <div class="panel">
+        <div class="a-div p3-div">
+          <!-- <div> -->
+          <a href="/p3/index.html" target="_blank">Math Calculators</a>
+          <!-- </div>
+        <div> -->
+          <a href="/p3/simplemathcalculator/cal.html" target="_black"
+            >Simple Math Calculator</a
+          >
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+
+      function change_icon(e) {
+        // console.log(e.childNodes[1].classList['value']);
+        if (e.childNodes[1].classList == "fa-solid fa-plus") {
+          e.childNodes[1].classList.remove("fa-plus");
+          e.childNodes[1].classList.add("fa-minus");
+        } else {
+          e.childNodes[1].classList.remove("fa-minus");
+          e.childNodes[1].classList.add("fa-plus");
+        }
+      }
+    </script>
+  </body>
+</html>

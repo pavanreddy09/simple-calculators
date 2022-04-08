@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&family=Roboto+Mono&family=Signika+Negative&display=swap" rel="stylesheet">
+    <title>Baby Names List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <h1 id="main-heading">Baby Names List</h1>
+        </div>
+        <div class="btn">
+          <input type="checkbox" id="boynamebox" />
+          <button onclick="boy_names()">Boy Names</button>
+          <input type="checkbox" id="girlnamebox" />
+          <button onclick="girl_names()">Girl Names</button>
+          <button onclick="All_names()" class="active">All Names</button>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="input-bars">
+        <div class="searchbar">
+          <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+          <input type="search" placeholder="Search by Name..." id="search" />
+        </div>
+
+        <div class="selectinput">
+          <h3>Select Names By Country :</h3>
+          <select class="dropdown">
+            <option value="1">India</option>
+            <option value="2">Usa</option>
+            <option value="3">Japanese</option>
+            <option value="4">South Africa</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-content">
+        <table>
+          <tr class="tablehead">
+            <!-- table header  -->
+          </tr>
+          <tbody id="mytable">
+            <!-- table content loads here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
